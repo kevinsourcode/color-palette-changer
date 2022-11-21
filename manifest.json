@@ -1,28 +1,31 @@
 {
     "manifest_version" : 3,
-    "name" : "focus mode",
-    "description" : "Simple hello world",
-    "version": "1.0",
+    "name" : "Color Reader",
+    "description" : "Turn your page into the color palette of your choice",
+    "author" : "Kevin Roy",
+    "version": "1.0.0",
     "action" : {
-        "default_icon" : "test.jpg"
+        "defualt_title" : "Color Reader",
+        "default_icon" : "images/icons/icons8-stormtrooper-38.png",
+        "default_popup" : "ui/popup.html"
     },
 
     "icons" : {
-        "16" : "test.jpg",
-        "32" : "test.jpg"
+        "16" : "images/icons/icons8-stormtrooper-16.png",
+        "38" : "images/icons/icons8-stormtrooper-38.png"
     },
+
 
     "background" : {
-        "service_worker" : "background.js"
-
+        "service-worker" :"popup.js"
     },
 
-    "permissions": ["activeTab", "scripting"],
+    "permissions": ["tabs", "activeTab"],
 
     "commands": {
         "_execute_action": {
           "suggested_key": {
-            "default": "Ctrl+B",
+            "default": "Alt+Shift+D",
             "mac": "Command+B"
           }
         }
